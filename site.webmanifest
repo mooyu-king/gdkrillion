@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "GD Krillion Online",
+  "short_name": "GD Krillion",
+  "description": "Play the daily Geometry Dash trivia game and explore spoiler-free guides.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "theme_color": "#0b101d",
+  "background_color": "#0b101d",
+  "icons": [
+    {
+      "src": "/images/gd-krillion-app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/gd-krillion-app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

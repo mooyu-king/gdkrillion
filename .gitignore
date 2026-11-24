@@ -1,0 +1,13 @@
+.wrangler/
+node_modules/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+/AGENTS.md
+/HANDOFF.md
+/PRD.md
+/PROJECT_NOTES.md
+/art-originals/
+/scripts/
+/src/

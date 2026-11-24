@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b101d">
+  <title>GD Krillion – Play Online for Free</title>
+  <meta name="description" content="Play GD Krillion free online. Answer daily Geometry Dash trivia, choose Rare or Crowd scoring, and get spoiler-free strategies for your next round.">
+  <link rel="canonical" href="https://gdkrillion.online/">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="GD Krillion">
+  <meta property="og:title" content="GD Krillion – Play Online for Free"><meta property="og:description" content="Play GD Krillion free online. Answer daily Geometry Dash trivia, choose Rare or Crowd scoring, and get spoiler-free strategies for your next round.">
+  <meta property="og:url" content="https://gdkrillion.online/"><meta property="og:image" content="https://gdkrillion.online/images/gd-krillion-cover.webp">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GD Krillion – Play Online for Free">
+  <meta name="twitter:description" content="Play GD Krillion free online. Answer daily Geometry Dash trivia, choose Rare or Crowd scoring, and get spoiler-free strategies for your next round."><meta name="twitter:image" content="https://gdkrillion.online/images/gd-krillion-cover.webp">
+  <link rel="stylesheet" href="/assets/site.css?v=703cd724bf72">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/gd-krillion-favicon.png">
+  <link rel="apple-touch-icon" href="/images/gd-krillion-app-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script defer data-domain="gdkrillion.online" data-api="https://data.1back.link/api/send" src="https://data.1back.link/js/app.js"></script>
+  <script type="module" src="/assets/site.js?v=27f0935bd9c5"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a><header class="header">
+    <div class="header-inner"><a href="/" class="brand"><img class="logo" src="/images/gd-krillion-logo.webp" width="36" height="36" alt=""><span>GD <strong>Krillion</strong></span></a>
+      <nav aria-label="Main navigation">
+        <a class="play-link" href="/#play"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Play Now</a>
+        <a href="/#how-to-play">How to Play</a><a href="/#guides">Guides</a><a href="/#faq">FAQ</a>
+      </nav>
+      <button class="install-button button" type="button" id="install-app"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></svg> Install App</button>
+    </div></header>
+  <main id="main">
+<section class="game-shell" id="play" aria-labelledby="game-title">
+  <div class="game-heading">
+    <div><h1 id="game-title">GD <span>Krillion</span></h1><p>Play GD Krillion free online. The daily Geometry Dash trivia challenge.</p></div>
+    <div class="tools" aria-label="Game controls">
+      <button class="tool" type="button" data-game-action="share" aria-label="Share play link" title="Share play link"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m9 10 6-4m-6 8 6 4"/></svg></button>
+      <button class="tool" type="button" data-game-action="expand" aria-label="Full screen" title="Full screen" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5m0 6v5h-5M4 15v5h5"/></svg></button>
+      <button class="tool" type="button" data-game-action="close" aria-label="Return to cover" title="Return to cover" disabled><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="stage" id="game-stage">
+    <div class="cover" id="game-cover">
+      <img class="cover-art" src="/images/gd-krillion-cover.webp" width="1440" height="810" alt="Original trivia arcade cover with a mint cube, glowing question marks and a violet portal" fetchpriority="high">
+      <div class="cover-center">
+        <span class="cover-label"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg> Daily trivia</span>
+        <button type="button" class="button primary start" id="start-game"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Play Now</button>
+        <noscript><p class="cover-note">Enable JavaScript to load the game.</p></noscript>
+      </div>
+    </div>
+    <div id="embed-slot"></div>
+  </div>
+  <div class="game-meta">
+    <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 30 seconds per prompt</span>
+    <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg> 10 daily prompts</span>
+    <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9 7 4h10l5 5-10 12L2 9Zm0 0h20M7 4l5 17 5-17"/></svg> Rare &amp; Crowd</span>
+  </div>
+  <div id="game-feedback" class="game-feedback">
+    <p id="game-status" aria-live="polite"></p>
+    <button type="button" class="button subtle" id="retry-game" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5m4-1a7 7 0 1 0-1 6"/></svg> Reload game</button>
+  </div>
+</section>
+
+<div class="wrap content-sections">
+<section id="how-to-play" aria-labelledby="how-title">
+  <div class="section-heading"><h2 id="how-title">How to play GD Krillion</h2><p>One prompt. One answer. The twist is what everyone else says.</p></div>
+  <div class="step-grid">
+    <article class="panel step"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><h3>Read the prompt</h3><p>A round of GD Krillion might ask about a rated level, a community list, a song or something from the editor. Look for the qualifier in the question before you start recalling names. A single word can change the entire set of valid answers.</p></article>
+    <article class="panel step"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Type one answer</h3><p>GD Krillion gives you thirty seconds per prompt. Pick a candidate you can name confidently, type it in the game field and submit it. If two names come to mind, spend a moment checking which one satisfies every part of the question.</p></article>
+    <article class="panel step"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9 7 4h10l5 5-10 12L2 9Zm0 0h20M7 4l5 17 5-17"/></svg><h3>Read the reveal</h3><p>GD Krillion compares your response with the answers other players gave. The reveal shows how your choice landed. Ten prompts make up the daily set, so one difficult question gives you useful feedback early enough to adjust for the rounds ahead.</p></article>
+  </div>
+</section>
+
+<section id="modes" aria-labelledby="modes-title">
+  <div class="section-heading"><h2 id="modes-title">Two ways to score in GD Krillion</h2><p>Choose a mode inside the game before you start. The daily questions are shared across both choices.</p></div>
+  <div class="mode-grid">
+    <article class="panel mode rare">
+      <figure class="art">
+  <img src="/images/gd-krillion-rare.webp" alt="A solitary mint diamond in a dark geometric recess" width="900" height="600" loading="lazy" decoding="async">
+  <figcaption>Original illustration of a hard-to-spot answer.</figcaption>
+</figure>
+      <div class="mode-content"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9 7 4h10l5 5-10 12L2 9Zm0 0h20M7 4l5 17 5-17"/></svg><h3>Rare mode</h3><p>Rare is the starting mode in GD Krillion. A correct response that few players think of can score better than a familiar one. Give yourself time to recall a valid deep cut, such as a lesser-discussed creator or a level from a list you remember well. Correctness comes first: an answer outside the category has no scoring value.</p></div>
+    </article>
+    <article class="panel mode crowd">
+      <figure class="art">
+  <img src="/images/gd-krillion-crowd.webp" alt="Several bright square tiles converge on a violet hub" width="900" height="600" loading="lazy" decoding="async">
+  <figcaption>Original illustration of players converging on one answer.</figcaption>
+</figure>
+      <div class="mode-content"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 20v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3M17 4a3 3 0 0 1 0 6m5 10v-3a4 4 0 0 0-3-4"/></svg><h3>Crowd mode</h3><p>Crowd rewards the answers other GD Krillion players enter most often. Imagine what comes to mind for a fan who has just read the same prompt. A name that appears in tutorials or community discussions may be easier for others to recall. Choose a response that fits the wording and feels recognizable to the audience.</p></div>
+    </article>
+  </div>
+  <div class="panel practice" id="practice">
+    <div><h3>Try an answer reveal</h3><p>Switch modes to see how the same sample answers change rank. This example uses made-up responses and counts. It leaves today's GD Krillion prompts unspoiled.</p>
+      <fieldset class="mode-picker"><legend>Sample scoring mode</legend>
+        <label><input type="radio" name="practice-mode" value="rare" checked><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9 7 4h10l5 5-10 12L2 9Zm0 0h20M7 4l5 17 5-17"/></svg> Rare</span></label>
+        <label><input type="radio" name="practice-mode" value="crowd"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 20v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3M17 4a3 3 0 0 1 0 6m5 10v-3a4 4 0 0 0-3-4"/></svg> Crowd</span></label>
+      </fieldset>
+    </div>
+    <div class="sample-output" data-tool-output>
+      <p id="sample-verdict" role="status"><strong>Quiet Orbit</strong> leads in Rare with 8 picks.</p>
+      <ol id="sample-results">
+        <li><span>Quiet Orbit</span><span>8 picks</span></li>
+        <li><span>Pulse Circuit</span><span>26 picks</span></li>
+        <li><span>Neon Gate</span><span>66 picks</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="panel topic-feature" aria-labelledby="topics-title">
+  <figure class="art">
+  <img src="/images/gd-krillion-topics.webp" alt="A glowing portal, waveform, orb and geometric editor blocks" width="900" height="600" loading="lazy" decoding="async">
+  <figcaption>Original illustration of the trivia categories.</figcaption>
+</figure>
+  <div class="topic-copy"><h2 id="topics-title">What GD Krillion asks about</h2>
+    <p>The GD Krillion pool includes main levels and vaults, rated levels, demons and community lists, creators and collaborations, players, music, modes and editor objects, and collections such as gauntlets and map packs. A day's set can pull from different parts of that pool.</p>
+    <p>Some GD Krillion prompts ask for a name from a particular list or from a certain point in time. Treat the date as part of the rule. A level you know from a recent update might fall outside an older snapshot. The same care applies to a specific rating, role or mode.</p>
+    <p>Between visits, pick a category that slowed you down in GD Krillion. Think of a well-known example and one you encountered through a favorite creator, song or old play session. This builds a pool of answers you can recall without looking up the next daily set.</p>
+  </div>
+</section>
+
+<section class="panel strategy" aria-labelledby="strategy-title">
+  <div class="section-heading"><h2 id="strategy-title">A GD Krillion routine for the timer</h2><p>Give yourself a repeatable way to choose between two valid answers.</p></div>
+  <div class="strategy-grid">
+    <div><h3>Keep a reliable answer in mind</h3><p>If the first name that comes to mind fits the prompt, hold onto it while you consider a second candidate. In Rare, there is room to choose the deeper cut if you can still spell it before the clock ends. In Crowd, that first name may be the one most fans recall. If you are unsure about the second candidate’s rating, release date or spelling, use the one you can confidently enter. An unusual guess is only worth considering after it passes the same test as the obvious answer.</p></div>
+    <div><h3>Compare two reveals after you play</h3><p>Look back at a question that felt easy and another that made you hesitate. The easy answer may have been popular because tutorials, lists or discussions use it often. The harder one may point to a part of the game you rarely follow. Use the GD Krillion reveal to notice what surprised you about the distribution. If you are comparing with a friend, each describe why you chose your answer after both of you have finished. This lets you compare reasoning without giving away a live prompt.</p></div>
+  </div>
+</section>
+
+<section id="guides" aria-labelledby="guides-title">
+  <div class="section-heading"><h2 id="guides-title">GD Krillion field guides</h2><p>Read a guide before your first round or come back after the reveal to work on a specific skill.</p></div>
+  <div class="guide-grid"><article class="panel guide-card"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C9 4 5 4 2 5v14c3-1 7-1 10 2 3-3 7-3 10-2V5c-3-1-7-1-10 2Zm0 0v14"/></svg><h3>Rare vs. Crowd</h3><p>Learn when to reach for a deep cut and when to give the familiar answer.</p><a class="button subtle" href="/guides/rare-vs-crowd/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C9 4 5 4 2 5v14c3-1 7-1 10 2 3-3 7-3 10-2V5c-3-1-7-1-10 2Zm0 0v14"/></svg> Read the scoring guide</a></article><article class="panel guide-card"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Daily strategy</h3><p>Build a routine for reading prompts and choosing an answer before the clock runs out.</p><a class="button subtle" href="/guides/daily-strategy/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C9 4 5 4 2 5v14c3-1 7-1 10 2 3-3 7-3 10-2V5c-3-1-7-1-10 2Zm0 0v14"/></svg> Read the timer guide</a></article></div>
+</section>
+
+<section class="panel return-panel" aria-labelledby="return-title">
+  <div>
+    <h2 id="return-title">Make GD Krillion a daily stop</h2>
+    <p>Leave yourself a place to return after the first GD Krillion run. Add the site to your home screen or bookmark it, then bring back one useful insight from the previous reveal. If a popular answer surprised you, consider where players might have seen it before.</p>
+    <p>You can send the GD Krillion play link to a friend and compare the kinds of answers you reached for. When you compare results, agree on the same mode first. An answer that earns a strong Rare result can tell a very different story in Crowd.</p>
+    <p>On a return visit, open the game panel and read the current start screen before selecting your mode. If you are still deciding, try the sample distribution again and notice how the same answer changes position. The example remains available alongside the guides whenever you want a refresher.</p>
+  </div>
+  <div class="stack-actions"><a class="button primary" href="#play"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Back to play</a><button class="button subtle" type="button" data-open-install><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></svg> Install App</button></div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="section-heading"><h2 id="faq-title">Questions about GD Krillion</h2></div>
+  <div class="faq-list"><details><summary>What is GD Krillion?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>It is a daily trivia game about Geometry Dash. Each prompt can have several valid answers. Their popularity among players determines how well they score in the selected mode.</p></details><details><summary>Can I play GD Krillion for free online?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Yes. Use Play Now in the game panel to open the free daily game in your browser. The hosted game needs an internet connection.</p></details><details><summary>How many questions does GD Krillion have each day?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>The daily set has ten prompts. The game gives you thirty seconds to type an answer for each one, then reveals how that answer sits among the other responses.</p></details><details><summary>What should I choose for my first GD Krillion round?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Pick Rare if you enjoy recalling overlooked levels, creators or mechanics. Pick Crowd if you enjoy predicting what another fan would type first. Either choice uses the same prompt set for that day.</p></details><details><summary>Will GD Krillion accept a different spelling?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>The game can accept common alternate names and is forgiving of some variation. Use the established name whenever you know it, especially when a title or creator name is short.</p></details><details><summary>Where can I see examples without spoilers?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Try the sample distribution above or open the scoring guide. Both use invented examples, so you can learn the mechanics without seeing answers from the current set.</p></details><details><summary>Can I use GD Krillion on a phone?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>The page supports touch and the game opens in the same panel. If the browser keyboard covers the answer field, try hiding it between prompts or turning your phone sideways.</p></details><details><summary>How can I return for the next GD Krillion daily?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Use Install App for browser-specific instructions, or bookmark the homepage. The Share button gives friends the play link without revealing any answers.</p></details></div>
+</section>
+</div></main>
+  <footer class="footer"><div class="wrap footer-inner">
+    <div class="footer-brand"><a href="/" class="brand"><img class="logo" src="/images/gd-krillion-logo.webp" width="36" height="36" alt=""><span>GD <strong>Krillion</strong></span></a><p>A daily trivia arcade for players who remember the levels, sounds and details behind Geometry Dash.</p></div>
+    <nav aria-label="Game"><h2>Play</h2><a href="/#play">Play the daily</a><a href="/#how-to-play">How to play</a><a href="/#faq">Game FAQ</a></nav>
+    <nav aria-label="Guides"><h2>Guides</h2><a href="/guides/rare-vs-crowd/">Rare vs. Crowd</a><a href="/guides/daily-strategy/">Daily strategy</a></nav>
+    <nav aria-label="Website information"><h2>Site</h2><a href="/about/">About Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/contact/">Contact</a><a href="/terms/">Terms of Service</a></nav>
+    <div class="copyright">© 2026 GD Krillion Online</div>
+  </div></footer>
+  <dialog id="site-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" type="submit" aria-label="Close dialog" title="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>
+    <h2 id="dialog-title">Install GD Krillion</h2>
+    <p id="install-help">Open your browser menu and choose Install or Add to Home Screen when available. You can also bookmark the site for your next daily set.</p>
+    <button class="button primary" type="button" id="native-install" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></svg> Install now</button>
+    <button class="button subtle" type="button" id="copy-link"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> Copy site link</button>
+    <label class="copy-fallback" id="copy-fallback" hidden>Site link <input type="url" readonly value="https://gdkrillion.online/"></label>
+    <p class="dialog-status" id="dialog-status" role="status"></p>
+  </dialog>
+</body>
+</html>
