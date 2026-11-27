@@ -16,15 +16,15 @@ let pendingInstall;
 let installCompleted = false;
 let opener;
 let sharedUrl = siteUrl;
-function openDialog(kind, trigger) {
-  const isShare = kind === 'share';
+function openDialog(trigger, playUrl) {
+  const isShare = Boolean(playUrl);
   const installed = installCompleted || standalone.matches || navigator.standalone;
   const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   opener = trigger;
-  sharedUrl = isShare ? siteUrl + '#play' : siteUrl;
-  dialogTitle.textContent = isShare ? 'Share the daily game' : 'Install GD Krillion';
-  installHelp.textContent = isShare ? 'Send the play link to a friend for the next daily set.'
+  sharedUrl = playUrl ?? siteUrl;
+  dialogTitle.textContent = isShare ? 'Share this game' : 'Install GD Krillion';
+  installHelp.textContent = isShare ? 'Send the play link to a friend.'
     : installed ? 'Open GD Krillion from your home screen or app launcher.'
     : pendingInstall ? 'Install the app for a quick way back to the daily game.'
     : ios ? 'In Safari, tap Share, then Add to Home Screen. You can also bookmark this page.'
@@ -53,7 +53,7 @@ window.addEventListener('appinstalled', () => {
 for (const button of [installButton, ...document.querySelectorAll('[data-open-install]')]) {
   button.addEventListener('click', () => {
     track('PWA Install Click');
-    openDialog('install', button);
+    openDialog(button);
   });
 }
 nativeInstall.addEventListener('click', async () => {
@@ -107,7 +107,14 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').catch(() => track('PWA Service Worker Error'));
 }
 
-function setupGame(game) {
+const embedUrls = {
+  gd: 'https://crowdict.com/embed/gd-krillion',
+  medical: 'https://crowdict.com/embed/medical-krillion'
+};
+
+function setupGame(game, source) {
+  const gameTitle = game.querySelector('h1').textContent;
+  const shareUrl = new URL(location.pathname + '#play', siteUrl).href;
   const cover = game.querySelector('#game-cover');
   const start = game.querySelector('#start-game');
   const slot = game.querySelector('#embed-slot');
@@ -132,7 +139,7 @@ function setupGame(game) {
     }
     clearTimeout(loadTimer);
     const frame = document.createElement('iframe');
-    frame.title = 'GD Krillion daily trivia game';
+    frame.title = gameTitle + ' trivia game';
     frame.allow = 'fullscreen';
     frame.allowFullscreen = true;
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -143,8 +150,8 @@ function setupGame(game) {
     };
     frame.addEventListener('load', () => update('Blank game panel? Try reloading the game.'), { once: true });
     frame.addEventListener('error', () => update('The game could not load. Check your connection and retry.'), { once: true });
-    frame.src = 'https://crowdict.com/embed/gd-krillion';
-    setFeedback('Opening the daily game…', false);
+    frame.src = source;
+    setFeedback('Opening the game…', false);
     cover.hidden = true;
     close.disabled = false;
     slot.replaceChildren(frame);
@@ -192,18 +199,76 @@ function setupGame(game) {
   share.addEventListener('click', async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'GD Krillion', url: siteUrl + '#play' });
+        await navigator.share({ title: gameTitle, url: shareUrl });
         return;
       } catch (error) {
         if (error.name === 'AbortError') return;
       }
     }
-    openDialog('share', share);
+    openDialog(share, shareUrl);
   });
 }
 
 const game = document.querySelector('#play');
-if (game) setupGame(game);
+if (game) setupGame(game, embedUrls[game.dataset.game]);
+
+const menu = document.querySelector('#play-more');
+document.addEventListener('click', (event) => {
+  if (menu.open && (!menu.contains(event.target) || event.target.closest('a'))) menu.open = false;
+});
+menu.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menu.open) {
+    menu.open = false;
+    menu.querySelector('summary').focus();
+  }
+});
+
+const pauseUpdates = document.querySelector('#pause-updates');
+const updatesWindow = document.querySelector('.updates-window');
+updatesWindow?.addEventListener('focusin', (event) => {
+  const link = event.target.closest('a');
+  if (!link) return;
+  const [title, message] = link.children;
+  updatesWindow.querySelector('.updates-focus').textContent = `${title.textContent} · ${message.textContent}`;
+});
+pauseUpdates?.addEventListener('click', () => {
+  const paused = pauseUpdates.getAttribute('aria-pressed') === 'false';
+  const label = paused ? 'Resume game updates' : 'Pause game updates';
+  pauseUpdates.setAttribute('aria-pressed', String(paused));
+  pauseUpdates.setAttribute('aria-label', label);
+  pauseUpdates.title = label;
+  pauseUpdates.querySelector('[data-pause-icon]').hidden = paused;
+  pauseUpdates.querySelector('[data-play-icon]').hidden = !paused;
+  pauseUpdates.closest('.updates').classList.toggle('updates-paused', paused);
+});
+
+const drill = document.querySelector('#medical-drill');
+if (drill) {
+  const feedback = drill.querySelector('#medical-feedback');
+  const initialMessage = feedback.textContent;
+  drill.hidden = false;
+  drill.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const values = new FormData(drill);
+    const goal = values.get('goal');
+    const answer = values.get('answer');
+    if (!answer) return;
+    if (answer === 'patella') {
+      feedback.textContent = 'Patella is the kneecap, outside the forearm. Popularity only matters after an answer fits.';
+      return;
+    }
+    const answerLabel = answer === 'radius' ? 'Radius' : 'Ulna';
+    const winner = goal === 'rare' ? 'Ulna' : 'Radius';
+    const mode = goal === 'rare' ? 'Rare' : 'Crowd';
+    const sample = ' In this sample, 72 people chose radius and 28 chose ulna.';
+    feedback.textContent = winner === answerLabel
+      ? `${answerLabel} fits the prompt and leads in ${mode}.${sample}`
+      : `${answerLabel} fits the prompt. ${winner} is the stronger ${mode} pick.${sample}`;
+  });
+  const clearFeedback = () => { feedback.textContent = initialMessage; };
+  drill.addEventListener('change', clearFeedback);
+  drill.addEventListener('reset', clearFeedback);
+}
 
 const practice = document.querySelector('#practice');
 if (practice) {

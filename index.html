@@ -12,24 +12,40 @@
   <meta property="og:url" content="https://gdkrillion.online/"><meta property="og:image" content="https://gdkrillion.online/images/gd-krillion-cover.webp">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GD Krillion – Play Online for Free">
   <meta name="twitter:description" content="Play GD Krillion free online. Answer daily Geometry Dash trivia, choose Rare or Crowd scoring, and get spoiler-free strategies for your next round."><meta name="twitter:image" content="https://gdkrillion.online/images/gd-krillion-cover.webp">
-  <link rel="stylesheet" href="/assets/site.css?v=703cd724bf72">
+  <link rel="stylesheet" href="/assets/site.css?v=b83ef47ced6d">
   <link rel="icon" type="image/png" sizes="48x48" href="/images/gd-krillion-favicon.png">
   <link rel="apple-touch-icon" href="/images/gd-krillion-app-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <script defer data-domain="gdkrillion.online" data-api="https://data.1back.link/api/send" src="https://data.1back.link/js/app.js"></script>
-  <script type="module" src="/assets/site.js?v=27f0935bd9c5"></script>
+  <script type="module" src="/assets/site.js?v=7d11100deab9"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><header class="header">
     <div class="header-inner"><a href="/" class="brand"><img class="logo" src="/images/gd-krillion-logo.webp" width="36" height="36" alt=""><span>GD <strong>Krillion</strong></span></a>
       <nav aria-label="Main navigation">
         <a class="play-link" href="/#play"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Play Now</a>
-        <a href="/#how-to-play">How to Play</a><a href="/#guides">Guides</a><a href="/#faq">FAQ</a>
+        <a href="/#how-to-play">How to Play</a><a href="/#guides">Guides</a>
+        <details class="play-more" id="play-more">
+          <summary>Play More <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="play-more-links"><a href="/#play"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> GD Krillion</a><a href="/medical-krillion/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Medical Krillion</a></div>
+        </details>
       </nav>
       <button class="install-button button" type="button" id="install-app"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></svg> Install App</button>
     </div></header>
+  <aside class="updates" aria-label="Game updates">
+    <div class="wrap updates-inner"><span class="updates-label">Game updates</span>
+      <div class="updates-window"><div class="updates-track"><div class="updates-group">
+    <a href="/medical-krillion/" target="_blank" rel="noopener noreferrer"><strong>Medical Krillion</strong><span>New medical trivia and scoring practice</span><span class="sr-only"> (opens in a new tab)</span></a><a href="/#play" target="_blank" rel="noopener noreferrer"><strong>GD Krillion</strong><span>Play the Geometry Dash daily</span><span class="sr-only"> (opens in a new tab)</span></a>
+  </div><div class="updates-group" aria-hidden="true">
+    <a href="/medical-krillion/" target="_blank" rel="noopener noreferrer" tabindex="-1"><strong>Medical Krillion</strong><span>New medical trivia and scoring practice</span><span class="sr-only"> (opens in a new tab)</span></a><a href="/#play" target="_blank" rel="noopener noreferrer" tabindex="-1"><strong>GD Krillion</strong><span>Play the Geometry Dash daily</span><span class="sr-only"> (opens in a new tab)</span></a>
+  </div></div><div class="updates-focus" aria-hidden="true"></div></div>
+      <button type="button" class="tool" id="pause-updates" aria-label="Pause game updates" title="Pause game updates" aria-pressed="false">
+        <span data-pause-icon><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5v14m6-14v14"/></svg></span><span data-play-icon hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg></span>
+      </button>
+    </div>
+  </aside>
   <main id="main">
-<section class="game-shell" id="play" aria-labelledby="game-title">
+<section class="game-shell" id="play" data-game="gd" aria-labelledby="game-title">
   <div class="game-heading">
     <div><h1 id="game-title">GD <span>Krillion</span></h1><p>Play GD Krillion free online. The daily Geometry Dash trivia challenge.</p></div>
     <div class="tools" aria-label="Game controls">
@@ -61,6 +77,18 @@
 </section>
 
 <div class="wrap content-sections">
+<section id="games" class="game-library" aria-labelledby="games-title">
+    <div class="section-heading"><h2 id="games-title">Play More Games</h2></div>
+    <div class="game-card-grid"><article class="panel game-card">
+      <img src="/images/medical-krillion-cover.webp" width="1200" height="675" alt="Illustrated anatomy book, microscope and stethoscope in a green-lit trivia arcade" loading="lazy" decoding="async">
+      <div class="game-card-copy"><h3>Medical Krillion</h3><p>Ten timed medical trivia prompts with Rare and Crowd scoring.</p>
+      <a class="button subtle" href="/medical-krillion/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Play Medical Krillion</a></div>
+    </article><article class="panel game-card">
+      <img src="/images/gd-krillion-cover.webp" width="1440" height="810" alt="Original trivia arcade cover with a mint cube, glowing question marks and a violet portal" loading="lazy" decoding="async">
+      <div class="game-card-copy"><h3>GD Krillion</h3><p>Ten Geometry Dash prompts about levels, music, creators and the editor.</p>
+      <a class="button subtle" href="/#play"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 12 7-12 7z" fill="currentColor" stroke="none"/></svg> Play GD Krillion</a></div>
+    </article></div>
+  </section>
 <section id="how-to-play" aria-labelledby="how-title">
   <div class="section-heading"><h2 id="how-title">How to play GD Krillion</h2><p>One prompt. One answer. The twist is what everyone else says.</p></div>
   <div class="step-grid">
@@ -148,7 +176,7 @@
 </div></main>
   <footer class="footer"><div class="wrap footer-inner">
     <div class="footer-brand"><a href="/" class="brand"><img class="logo" src="/images/gd-krillion-logo.webp" width="36" height="36" alt=""><span>GD <strong>Krillion</strong></span></a><p>A daily trivia arcade for players who remember the levels, sounds and details behind Geometry Dash.</p></div>
-    <nav aria-label="Game"><h2>Play</h2><a href="/#play">Play the daily</a><a href="/#how-to-play">How to play</a><a href="/#faq">Game FAQ</a></nav>
+    <nav aria-label="Game"><h2>Play</h2><a href="/#play">GD Krillion</a><a href="/medical-krillion/">Medical Krillion</a><a href="/#how-to-play">How to play</a><a href="/#faq">Game FAQ</a></nav>
     <nav aria-label="Guides"><h2>Guides</h2><a href="/guides/rare-vs-crowd/">Rare vs. Crowd</a><a href="/guides/daily-strategy/">Daily strategy</a></nav>
     <nav aria-label="Website information"><h2>Site</h2><a href="/about/">About Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/contact/">Contact</a><a href="/terms/">Terms of Service</a></nav>
     <div class="copyright">© 2026 GD Krillion Online</div>
